@@ -32,23 +32,18 @@ main, .historico {
 }
 
 .dados {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 1fr 1fr;
-
     grid-area: 'dados';
 }
 
 main {
-    height: 320px;
+    height: 220px;
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 20% 70%;
+    grid-template-rows: 40% 60%;
     grid-template-areas:
         'busca'
         'dados';
-    row-gap: 20px;
     grid-area: 'main';
     margin-right: 100px;
 }
@@ -60,6 +55,7 @@ main {
     box-shadow: 2px 2px 2px 2px black;
     cursor: pointer;
     color: white;
+    width: 100px;
 }
 
 .botao:active {
@@ -116,12 +112,6 @@ main {
     margin: 50px 100px;
 }
 
-.dados-endereco {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .dados-historico {
     display: flex;
     align-items: center;
@@ -131,3 +121,19 @@ main {
     box-shadow: 2px 2px 2px 2px black;
     margin: 10px;
 }
+
+th, td {
+    height: 50px;
+    padding: 0px 40px;
+    border-bottom: solid 2px rgb(0, 0, 22);
+}
+
+th {
+    background-color: rgb(119, 119, 252);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
