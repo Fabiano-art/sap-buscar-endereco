@@ -30,6 +30,7 @@
                         <th>Estado</th>
                         <th>UF</th>
                     </tr>
+                    <tr></tr>
                 </table>
             </div>
         </main>
@@ -46,44 +47,6 @@
 </body>
 
 
-<script>
-
-    const buttonPesquisar = document.querySelector('#pesquisar')
-    buttonPesquisar.onclick = e => {
-
-        const cep = document.querySelector('.campo-cep')
-        const tabela = document.querySelector('.tabela')
-
-        const url = `https://viacep.com.br/ws/${cep.value}/json/`
-
-        fetch(url)
-            .then(resp => resp.json())
-            .then(endereco => {
-                const tr = document.createElement('tr')
-
-                const tdLogradouro = document.createElement('td')
-                const tdComplemento = document.createElement('td')
-                const tdBairro = document.createElement('td')
-                const tdEstado = document.createElement('td')
-                const tdUf = document.createElement('td')
-
-                tdLogradouro.innerHTML = endereco.logradouro
-                tdComplemento.innerHTML = endereco.complemento
-                tdBairro.innerHTML = endereco.bairro
-                tdEstado.innerHTML = endereco.localidade
-                tdUf.innerHTML = endereco.uf
-
-                tr.appendChild(tdLogradouro)
-                tr.appendChild(tdComplemento)
-                tr.appendChild(tdBairro)
-                tr.appendChild(tdEstado)
-                tr.appendChild(tdUf)
-
-                tabela.appendChild(tr)
-            })
-    }
-
-
-</script>
+<script src="./js/codigo.js"></script>
 
 </html>
