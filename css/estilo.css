@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(92, 92, 252);
+    height: 100px;
+    color: white;
+    box-sizing: content-box;
+}
+
+main, .historico {
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 119)
+}
+
+.titulo {
+    font-size: 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+.buscar {
+    grid-area: 'busca';
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    border-bottom: 1px gray solid;
+}
+
+.dados {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    grid-area: 'dados';
+}
+
+main {
+    height: 320px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 70%;
+    grid-template-areas:
+        'busca'
+        'dados';
+    row-gap: 20px;
+    grid-area: 'main';
+    margin-right: 100px;
+}
+
+.botao {
+    background-color: rgb(92, 92, 252);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px black;
+    cursor: pointer;
+    color: white;
+}
+
+.botao:active {
+    box-shadow: none;
+}
+
+.campo-cep {
+    width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-size: 16px;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 16px;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    font-size: 16px;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    font-size: 16px;
+}
+
+.historico {
+    grid-area: 'historico';
+    height: 120%;
+}
+
+.historico h1 {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border-bottom: 2px solid rgb(0, 0, 48);
+    background-color: rgb(92, 92, 252);
+}
+
+.principal {
+    display: grid;
+
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        'main' 'historico';
+
+    margin: 50px 100px;
+}
+
+.dados-endereco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dados-historico {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px black;
+    margin: 10px;
+}
