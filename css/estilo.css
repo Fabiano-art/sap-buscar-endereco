@@ -90,7 +90,8 @@ main {
 
 .historico {
     grid-area: 'historico';
-    height: 120%;
+    height: 400px;
+    overflow: scroll;
 }
 
 .historico h1 {
