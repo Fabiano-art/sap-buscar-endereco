@@ -23,9 +23,7 @@ function ajaxAndShow(e){
             }
 
             filtrado = filtrar(dados)
-            const itens = filtrado.reduce(
-                (html, endereco) => html + `<td>${endereco}</td>`, ''
-            )
+            const itens = filtrado.reduce((html, endereco) => html + `<td>${endereco}</td>`, '')
 
             tr.innerHTML = `<tr>${itens}</tr>`
             adicionarHistorico(endereco)
@@ -47,9 +45,7 @@ function ajaxFromHistorico(e){
             }
 
             filtrado = filtrar(dados)
-            const itens = filtrado.reduce(
-                (html, endereco) => html + `<td>${endereco}</td>`, ''
-            )
+            const itens = filtrado.reduce((html, endereco) => html + `<td>${endereco}</td>`, '')
             
             tr.innerHTML = `<tr>${itens}</tr>`
         })
